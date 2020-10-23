@@ -52,7 +52,7 @@
 \setlength{\columnsep}{\baselineskip} % Set the spacing between columns
 
 % Define the left frame (sidebar)
-\newflowframe{0.22\textwidth}{\textheight}{0pt}{0pt}[left]
+\newflowframe{0.22\textwidth}{\textheight}{-10pt}{0pt}[left]
 \newlength{\LeftMainSep}
 \setlength{\LeftMainSep}{0.2\textwidth}
 \addtolength{\LeftMainSep}{1\columnsep}
@@ -70,7 +70,7 @@
 % Define the right frame (main body)
 \addtolength{\LeftMainSep}{1.5pt}
 \addtolength{\LeftMainSep}{1\columnsep}
-\newflowframe{0.7\textwidth}{\textheight}{\LeftMainSep}{0pt}[main01]
+\newflowframe{0.75\textwidth}{\textheight}{\LeftMainSep}{0pt}[main01]
 
 \pagestyle{empty} % Disable all page numbering
 
