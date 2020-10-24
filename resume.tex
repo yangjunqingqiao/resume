@@ -15,70 +15,30 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-\documentclass[a4paper,12pt]{memoir} % Font and paper size
-
-\input{structure.tex} % Include the file specifying document layout and packages
+\documentclass[a4paper,12pt]{memoir} 
+\input{structure.tex}
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION 
 %----------------------------------------------------------------------------------------
 
-\userinformation{ % Set the content that goes into the sidebar of each page
+\userinformation{
 	\raggedleft
-		% \includegraphics[width=0.6\columnwidth]{headshot.jpg}\\[\baselineskip] % photo
-		\small % Smaller font size
-		YangJunqing Qiao \\ 
+		\small
+		\textcolor{ForestGreen}{YangJunqing Qiao} \\ 
 		\textit{junqingqiao@gmail.com} \\ 
 		\href{https://yangjunqingqiao.github.io/}{Personal Website} \\ 
 		(978) 905-9534 \\ 
-		\Sep
-
+		\sep
 	\raggedright
-	% \SidebarCategory{Tech Stack}
-	% 	\SidebarItem{Proficient:}{
-	% 		\begin{tabular}{p{0.1\textwidth} p{0.1\textwidth}}
-	% 			\bluebullet Python &  \bluebullet C++ \\
-	% 		\end{tabular}
-	% 	}
-	% 	\SidebarItem{Intermediate:}{
-	% 		\begin{tabular}{p{0.1\textwidth} p{0.1\textwidth}}
-	% 			\bluebullet Java & \bluebullet Shell \\
-	% 			\bluebullet SQL\\
-	% 		\end{tabular}
-	% 	}
-	% 	\SidebarItem{Exposure:}{
-	% 		\begin{tabular}{p{0.1\textwidth} p{0.1\textwidth}}
-	% 			\bluebullet Scala & \bluebullet OCaml \\
-	% 			\bluebullet Assembly & \bluebullet JS \\
-	% 			\bluebullet MATLAB & \bluebullet R
-	% 		\end{tabular}
-		% }
 }
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\userinformation % Print your information in the left column
-
-\framebreak % End of the first column
-
-%----------------------------------------------------------------------------------------
-%	HEADING
-%----------------------------------------------------------------------------------------
-
-% \cvheading{YangJunqing Qiao} % Large heading - name
-
-% \cvsubheading{CS Grad Student} % Subheading - occupation/specialization
-
-%----------------------------------------------------------------------------------------
-%	ABOUT ME
-%----------------------------------------------------------------------------------------
-
-% \aboutme{I am}{a \textbf{software engineer} with an interest and experience in \textbf{AI/ML} and \textbf{data driven solutions}}
+\userinformation
+\framebreak
 
 %----------------------------------------------------------------------------------------
 %	EXPERIENCE
@@ -86,55 +46,59 @@
 
 \CVSection{Experience}
 
-%------------------------------------------------
+\CVItem
+	{\textit{Software Engineer II}, Raytheon \hfill Jun 2020 - Present}
+	{
+		\begin{itemize}
+			\item \textbf{Maintain} and \textbf{upgrade} real time mission critical systems across 5 different products. \textit{(C++)}
+			\item \textbf{Increased automated test coverage} for legacy and emerging products. \textit{(C++, Matlab, Java, Perl, Lua)}
+			\item \textbf{Generalize} and \textbf{extend} mature product paradigms to newer products. \textit{(C++)}
+		\end{itemize}
+	}
 
-\CVItem{June 2020 - Present, \textit{Software Engineer II}, Raytheon}{
-	\begin{itemize}
-		\item \textbf{Maintain} and \textbf{upgrade} real time mission critical systems across 5 different products. \textit{(C++)}
-		\item \textbf{Increased automated test coverage} for legacy and emerging products. \textit{(C++, Matlab, Java, Perl, Lua)}
-		\item \textbf{Generalize} and \textbf{extend} mature product paradigms to newer products. \textit{(C++)}
-	\end{itemize}
-}
+\CVItem
+	{\textit{Software Engineer Intern}, Raytheon \hfill Jun 2019 - Aug 2019}
+	{
+		\begin{itemize}
+			\item \textbf{Decreased latency of operator commands} by parallelizing legacy status polling thread of radar operating software \textit{(C++)}
+			\item \textbf{Streamlined software testing process} by developing a hardware emulator to simulate operator commands. \textit{(Python)}
+			\item \textbf{Increased the validity of standard testing procedure} by helping to identify and resolve long standing segfault. \textit{(C++)}
+		\end{itemize}
+	}
 
-%------------------------------------------------
+\CVItem
+	{\textit{Junior Investigator}, REUMass Amherst \hfill Jun 2017 - Aug 2017}
+	{
+		\begin{itemize}
+			\item Survey paper detailing the \textbf{insights circuit and complexity theory have on the power and behavior of neural networks}
+			\item Showed why \textbf{neural networks are hard to analyze} and understand on a theoretical level by compiling several theorems reducing them to \textbf{unsolved problems in circuit theory}.
+		\end{itemize}
+	}
 
-\CVItem{June 2019 - August 2019, \textit{Software Engineer Intern}, Raytheon}{
-	\begin{itemize}
-		\item \textbf{Decreased latency of operator commands} by parallelizing legacy status polling thread of radar operating software \textit{(C++)}
-		\item \textbf{Streamlined software testing process} by developing a hardware emulator to simulate operator commands. \textit{(Python)}
-		\item \textbf{Increased the validity of standard testing procedure} by helping to identify and resolve long standing segfault. \textit{(C++)}
-	\end{itemize}
-}
-
-%------------------------------------------------
-
-\CVItem{June 2017 - August 2017, \textit{Junior Investigator}, REU UMass Amherst (funded by NSF)}{
-\begin{itemize}
-	\item Survey paper detailing the \textbf{insights circuit and complexity theory have on the power and behavior of neural networks}
-    \item Showed why \textbf{neural networks are hard to analyze} and understand on a theoretical level by compiling several theorems reducing them to \textbf{unsolved problems in circuit theory}.
-\end{itemize}
-}
-
-%------------------------------------------------
-
-\Sep % Extra whitespace after the end of a major section
+\Sep
 
 %----------------------------------------------------------------------------------------
-%	COMMUNICATION SKILLS
+%	PROJECTS
 %----------------------------------------------------------------------------------------
 
 \CVSection{Projects}
 
-%------------------------------------------------
-\CVItem{2019, \textit{Detecting Latent Heuristics in BERT}, Reproducibility Paper}{Tested \textbf{BERT} on two traditionally difficult NLP tasks to \textbf{probe} its \textbf{reliance on latent statistical heuristics and biases} in the datasets. \textit{(Python, Pytorch)}}
+\CVItem
+	{\textit{Detecting Latent Heuristics in BERT}, Reproducibility Paper \hfill 2019}
+	{
+		\begin{itemize}
+			\item Tested \textbf{BERT} on two traditionally difficult NLP tasks to \textbf{probe} its \textbf{reliance on latent statistical heuristics and biases} in the datasets. \textit{(Python, Pytorch)}
+		\end{itemize}
+	}
 
-%------------------------------------------------
-
-\CVItem{2018, \textit{Gaussian Normalization}, Neural Networks Final Project}{Building on the idea of batch and copula normalization, I investigated and drew conclusions about the effectiveness of \textbf{normalizing arbitrary layers of a neural network with a Gaussian distribution}. \textit{(Python, Pytorch)}}
-
-%------------------------------------------------
-
-\Sep % Extra whitespace after the end of a major section
+\CVItem
+	{\textit{Gaussian Normalization}, Neural Networks Final Project \hfill 2018}
+	{
+		\begin{itemize}
+			\item Extending the ideas of batch and copula normalization, I showed why \textbf{normalizing arbitrary layers of a neural network with a Gaussian distribution} is impractical. \textit{(Python, Pytorch)}
+		\end{itemize}
+	}
+\Sep
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
@@ -142,17 +106,15 @@
 
 \CVSection{Skills}
 
-%------------------------------------------------
-
 \CVItem{Programming}
-{\begin{tabular}{p{0.2\textwidth} p{0.2\textwidth} p{0.2\textwidth}}
-\bluebullet Python &  \bluebullet C++ & \bluebullet Java\\
-\bluebullet Shell &  \bluebullet SQL\\
-\end{tabular}}
+{
+	\begin{tabular}{p{0.2\textwidth} p{0.2\textwidth} p{0.2\textwidth}}
+		\bluebullet Python &  \bluebullet C++ & \bluebullet Java\\
+		\bluebullet Shell &  \bluebullet SQL\\
+	\end{tabular}
+}
 
-% ------------------------------------------------
-
-\Sep % Extra whitespace after the end of a major section
+\Sep
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
@@ -160,19 +122,15 @@
 
 \CVSection{Education}
 
-%------------------------------------------------
-
-\CVItem{University of Massachusetts, Amherst}{
+\CVItem{University of Massachusetts, Amherst}
+{
 	\begin{itemize}
-		\item MS in Computer Science \textit{(Sept 2018 - Feb 2020)} \\
-		\item BS in Computer Science and Mathematics \textit{(Sept 2014 - Jun 2018)}
+		\item MS in Computer Science \hfill \textcolor{ForestGreen}{\textit{Sept 2018 - Feb 2020}} \\
+		\item BS in Computer Science and Mathematics \hfill \textcolor{ForestGreen}{\textit{Sept 2014 - Jun 2018}}
 	\end{itemize}
 }
 
-
-%------------------------------------------------
-
-\Sep % Extra whitespace after the end of a major section
+\Sep
 
 %----------------------------------------------------------------------------------------
 %	NEW PAGE DELIMITER
@@ -190,7 +148,7 @@
 %---------------------------------------------------------------------------------------
 \CVSection{Volunteering}
 
-\CVItem{April 2020 - Present, CoronaWhy}{
+\CVItem{CoronaWhy \hfill Apr 2020 - Present}{
 	\begin{itemize}
 		\item Developing a research tool to \textbf{parse contradictory claims} in \textbf{Covid-19 medical literature} to help \textbf{rank} the \textbf{effectiveness} of studied \textbf{vaccines} and \textbf{theraputics}.
 		\item \textbf{Productionized research notebooks} using \textbf{CI} techniques. \textit{(Python)}
@@ -204,32 +162,11 @@
 
 \CVSection{Awards}
 
-%------------------------------------------------
-
-\CVItem{2020, \textit{Datathon Finalist}, Brown University}{Using \textbf{RNNs} to predict laser melt pool dimensions over time. \textit{(Python)}}
-
-%------------------------------------------------
-
-\Sep % Extra whitespace after the end of a major section
-
-%----------------------------------------------------------------------------------------
-%	INTERESTS
-%----------------------------------------------------------------------------------------
-
-% \CVSection{Interests}
-
-%------------------------------------------------
-
-% \CVItem{Professional}{Data analysis, software design, economics, optimization, security, fairness, }
-
-%------------------------------------------------
-
-% \CVItem{Personal}{Violin, swimming, cooking, fitness}
-
-%------------------------------------------------
-
-% \Sep % Extra whitespace after the end of a major section
-
-%----------------------------------------------------------------------------------------
+\CVItem
+	{\textit{Datathon Finalist}, Brown University \hfill 2020}
+	{
+		\begin{itemize}
+			\item Using \textbf{RNNs} to predict laser melt pool dimensions over time. \textit{(Python)}
+	}
 
 \end{document}
